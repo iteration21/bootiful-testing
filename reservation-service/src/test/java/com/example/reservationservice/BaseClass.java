@@ -2,6 +2,7 @@ package com.example.reservationservice;
 
 import io.restassured.RestAssured;
 import org.junit.Before;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -36,6 +37,11 @@ public class BaseClass {
 			.thenReturn(Flux.just(new Reservation("1", "Jane"), new Reservation("2", "John")));
 
 		RestAssured.baseURI = "http://localhost:" + this.port + "";
+
+	}
+
+	@Test
+	public void contextOk() {
 
 	}
 
